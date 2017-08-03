@@ -1,101 +1,73 @@
-<?php
-    defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>Welcome to CodeIgniter</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
 
-    <style type="text/css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/page.css">
+    <!-- https://bootswatch.com/lumen/ -->
 
-    ::selection { background-color: #E13300; color: white; }
-    ::-moz-selection { background-color: #E13300; color: white; }
-
-    body {
-        background-color: #FFF;
-        margin: 40px;
-        font: 16px/20px normal Helvetica, Arial, sans-serif;
-        color: #4F5155;
-        word-wrap: break-word;
-    }
-
-    a {
-        color: #003399;
-        background-color: transparent;
-        font-weight: normal;
-    }
-
-    h1 {
-        color: #444;
-        background-color: transparent;
-        border-bottom: 1px solid #D0D0D0;
-        font-size: 24px;
-        font-weight: normal;
-        margin: 0 0 14px 0;
-        padding: 14px 15px 10px 15px;
-    }
-
-    code {
-        font-family: Consolas, Monaco, Courier New, Courier, monospace;
-        font-size: 16px;
-        background-color: #f9f9f9;
-        border: 1px solid #D0D0D0;
-        color: #002166;
-        display: block;
-        margin: 14px 0 14px 0;
-        padding: 12px 10px 12px 10px;
-    }
-
-    #body {
-        margin: 0 15px 0 15px;
-    }
-
-    p.footer {
-        text-align: right;
-        font-size: 16px;
-        border-top: 1px solid #D0D0D0;
-        line-height: 32px;
-        padding: 0 10px 0 10px;
-        margin: 20px 0 0 0;
-    }
-
-    #container {
-        margin: 10px;
-        border: 1px solid #D0D0D0;
-        box-shadow: 0 0 8px #D0D0D0;
-    }
-    </style>
-</head>
-<body>
-
-<div id="container">
-    <h1>Welcome to CodeIgniter!</h1>
-
-    <div id="body">
-
-        <h2><a href="<?php echo site_url('rest-server'); ?>">REST Server Tests</a></h2>
-
-        <?php if (file_exists(FCPATH.'documentation/index.html')) : ?>
-        <h2><a href="<?php echo base_url('documentation/index.html'); ?>" target="_blank">REST Server Documentation</a></h2>
-        <?php endif ?>
-
-        <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-        <p>If you would like to edit this page you'll find it located at:</p>
-        <code>application/views/welcome_message.php</code>
-
-        <p>The corresponding controller for this page is found at:</p>
-        <code>application/controllers/Welcome.php</code>
-
-        <?php if (file_exists(FCPATH.'user_guide/index.html')) : ?>
-        <p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="<?php echo base_url('user_guide/index.html'); ?>" target="_blank">User Guide</a>.</p>
-        <?php endif ?>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<!--  Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand-color" href="#">PROJECT ONE SHEET</a>
     </div>
 
-    <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>'.CI_VERSION.'</strong>' : '' ?></p>
-</div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> <span class="sr-only">(current)</span></a></li> -->
+        <!-- <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <!-- <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul> -->
+        </li>
+      </ul>
+      <!-- <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input class="form-control" placeholder="Search" type="text">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--End  Navbar -->
 
-</body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
 </html>
