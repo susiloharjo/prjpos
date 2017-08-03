@@ -1,0 +1,117 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Aug 03, 2017 at 02:19 PM
+-- Server version: 5.7.19-0ubuntu0.16.04.1
+-- PHP Version: 7.0.18-0ubuntu0.16.04.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ciapi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `my_sessions`
+--
+
+CREATE TABLE `my_sessions` (
+  `id` varchar(128) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `my_sessions`
+--
+
+INSERT INTO `my_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
+('u9c3cs6jqsff0uaq69c93ufsv6s28m3b', '127.0.0.1', 1501727165, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313732373136353b),
+('7nvs8vedjo2dv35ko084i89nc82f571s', '127.0.0.1', 1501727613, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313732373631333b),
+('600ec6iqkdiumftk8lnuvp7cclcmhi0v', '127.0.0.1', 1501728005, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313732383030353b),
+('j16569s4k5a9irhvl69j6dih3egn8u93', '127.0.0.1', 1501728267, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313732383030353b),
+('gf003usvsjqoa9mm401e49fj9pbsj0ls', '127.0.0.1', 1501738114, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313733383131343b),
+('funnqkhnjsgvldsgsmapsjbhffv9ov0h', '127.0.0.1', 1501738417, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313733383431373b),
+('eo0ti3d84aqbf7ih15avt55hf011kqvv', '127.0.0.1', 1501738951, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313733383935313b),
+('3i18g2knu23q27q227tnon70gs4ok2u2', '127.0.0.1', 1501739328, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313733393332383b),
+('0ds30ohn4j123fdjbodsrbim1k7ojc3t', '127.0.0.1', 1501739660, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313733393636303b),
+('31565smkusb8n32r7hg84d9cfp7rde3j', '127.0.0.1', 1501740023, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734303032333b),
+('st3ath974n5sr74oinass3t0outi6esp', '127.0.0.1', 1501740343, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734303334333b),
+('gihkab3gl0hqrg1nul92tr435jlmt5c2', '127.0.0.1', 1501740652, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734303635323b),
+('rpqlabdc62b9iojs0brat7q6bv5r2dt0', '127.0.0.1', 1501741082, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734313038323b),
+('nkst5vcgek5ibd7pr88hpkfu3gdsulrf', '::1', 1501743819, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734333831393b),
+('fr0ongit4sklsim8qis51bpthbaop2lg', '127.0.0.1', 1501741939, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734313933393b),
+('mjpo6nh6st8bn50ajpemtr4kmebg8o5p', '127.0.0.1', 1501742546, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734323534363b),
+('42ea9a23rhcjicn9p0uuk2jh9vvivh31', '127.0.0.1', 1501743021, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734333032313b),
+('a5ufc23ffl4ptm9uqql50setck2jqsif', '127.0.0.1', 1501743519, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734333531393b),
+('v5apeam7tblh6ruo8k5usi4opdtdlh1s', '127.0.0.1', 1501743826, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734333832363b),
+('o3f4felptgmb4eqrj28k5tctt0e2a9pk', '127.0.0.1', 1501744215, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734343231353b),
+('m8l1jn1sk3fmd98u32qa1rmdof87nufh', '127.0.0.1', 1501744352, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734343335323b),
+('e4holp4indml5n2brb4bug3phggmcv54', '127.0.0.1', 1501744427, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734343231353b),
+('fiq40uovohgdlu069naup2q3nv0u5t1n', '127.0.0.1', 1501744429, 0x5f5f63695f6c6173745f726567656e65726174657c693a313530313734343335323b);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `project`
+--
+
+CREATE TABLE `project` (
+  `id` int(225) NOT NULL,
+  `nama` varchar(225) NOT NULL,
+  `noprj` int(225) NOT NULL,
+  `lokasi` varchar(225) NOT NULL,
+  `perusahaan` varchar(225) NOT NULL,
+  `createDate` date DEFAULT NULL,
+  `updateDate` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `project`
+--
+
+INSERT INTO `project` (`id`, `nama`, `noprj`, `lokasi`, `perusahaan`, `createDate`, `updateDate`) VALUES
+(2, 'Update Nama', 33, 'sangata', 'KPC', NULL, '2017-08-03'),
+(3, 'Rental radio', 21, 'Jakarta', 'Pertamina', '2017-08-03', '2017-08-03'),
+(4, 'Update Nama', 33, 'sangata', 'KPC', NULL, '2017-08-03');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `my_sessions`
+--
+ALTER TABLE `my_sessions`
+  ADD KEY `ci_sessions_timestamp` (`timestamp`);
+
+--
+-- Indexes for table `project`
+--
+ALTER TABLE `project`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `project`
+--
+ALTER TABLE `project`
+  MODIFY `id` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
