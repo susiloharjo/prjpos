@@ -29,10 +29,10 @@ class project extends REST_Controller {
         $data = array(
                     'nama'           => $this->post('nama'),
                     'noprj'          => $this->post('noprj'),
-                    'lokasi'    => $this->post('lokasi'),
-                    'perusahaan'        => $this->post('perusahaan'),
-                    'createDate'        => $this->post('createDate'),
-                    'UpdateDate'        => $this->post('UpdateDate'),
+                    'lokasi'         => $this->post('lokasi'),
+                    'perusahaan'     => $this->post('perusahaan'),
+                    'createDate'     => date('Y-m-d'),
+                    'UpdateDate'     => $this->post('UpdateDate'),
                   );
         $insert = $this->db->insert('project', $data);
         if ($insert) {
@@ -46,12 +46,13 @@ class project extends REST_Controller {
     function data_put() {
         $id = $this->put('id');
         $data = array(
-                  'nama'           => $this->post('nama'),
-                  'noprj'          => $this->post('noprj'),
-                  'lokasi'         => $this->post('lokasi'),
-                  'perusahaan'     => $this->post('perusahaan'),
-                  'createDate'     => $this->post('createDate'),
-                  'UpdateDate'     => $this->post('UpdateDate'),
+                    'id'            => $this->put('id'),
+                    'nama'          => $this->put('nama'),
+                    'noprj'         => $this->put('noprj'),
+                    'lokasi'        => $this->put('lokasi'),
+                    'perusahaan'    => $this->put('perusahaan'),
+                    'updateDate'    => date('Y-m-d'),
+                    'createDate'    => $this->put('createDate'),
                   );
         $this->db->where('id', $id);
         $update = $this->db->update('project', $data);
@@ -64,11 +65,11 @@ class project extends REST_Controller {
 
     // delete mahasiswa
     function data_delete() {
-        $nim = $this->delete('nim');
-        $this->db->where('nim', $nim);
-        $delete = $this->db->delete('mahasiswa');
+        $id = $this->delete('id');
+        $this->db->where('id', $id);
+        $delete = $this->db->delete('project');
         if ($delete) {
-            $this->response(array('status' => 'success'), 201);
+            $this->response(array('status' => 'deleted'), 201);
         } else {
             $this->response(array('status' => 'fail', 502));
         }
