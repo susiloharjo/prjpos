@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/page.css">
     <!-- https://bootswatch.com/lumen/ -->
 
@@ -22,6 +23,8 @@
   </head>
   <body>
 <!--  Navbar -->
+<div class="header1">
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -31,7 +34,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand brand-color" href="#">PROJECT ONE SHEET</a>
+      <a class="navbar-brand warna-title" href="#"><strong>PROJECT ONE SHEET</strong></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -58,12 +61,74 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
+        <li><a href="Login">Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <!--End  Navbar -->
+
+<div class="container tulisan1">
+  <div class="col-lg-9">
+    <h1>SELAMAT DATANG DI POS</h1>
+    <ul>
+      <li>Dengan POS kita bisa mengatur project kita dengan mudah dan efisien</li>
+      <li>POS memungkinkan kita mengatur dan berkolaborasi dengan multi departemen</li>
+      <li>Dengan POS semua aktifitas dan progress semua terpantau oleh semua orang dengan real time dan kemampuan diakses dengan mudah dimana saja dan kapan saja</li>
+
+    </ul>
+      </div>
+
+</div>
+
+</div>
+<!--  end header 1-->
+<!--  header 2-->
+<div class="header2">
+  <div class="container tulisan1">
+    <div class="col-lg-3">
+      <img src="<?php echo base_url() ?>assets/images/emmet.png" alt="">
+    </div>
+    <div class="col-lg-9">
+      <h1 class="text-right"> PROJECT ONE SHEET (POS)</h1>
+      <ul>
+        <li class="text-justify">POS adalah suatu sistem terintegrasi antara RQM, Sales, Engineering, Project, Procurement, Safety dan Finance </li>
+        <li class="text-justify">POS adalah sebuah wadah komunikasi lintas Departemen </li>
+        <li class="text-justify">POS memungkinkan memonitoring secara keseluruhan Project dari awal sampai dengan akhir</li>
+        <li class="text-justify">POS melibatkan semua pihak untuk turut serta aktif memantau jalannya impelementasi project</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="header3">
+  <div class="container">
+
+  <div class="col-lg-9">
+
+<div class="text-left tulisan2">
+  <h1>Apa yang POS bisa lakukan ?</h1>
+  <ol>
+    <li>Create Project</li>
+    <li>MOM Meeting</li>
+    <li>To Do List</li>
+    <li>Chatting</li>
+    <li>Progress Monitoring</li>
+    <li>Cash Flow Management</li>
+  </ol>
+</div>
+</div>
+
+<div class="col-lg-3 icon">
+  <span class="glyphicon glyphicon-tasks iconbesar"></span>
+</div>
+</div>
+</div>
+
+<!--  End Header 2-->
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
