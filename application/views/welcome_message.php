@@ -61,7 +61,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="Login">Login</a></li>
+        <li><a class="btn btn-xs btn-default" href="Login">Login</a></li>
       </ul>
     </div>
   </div>
@@ -74,7 +74,7 @@
     <ul>
       <li>Dengan POS kita bisa mengatur project kita dengan mudah dan efisien</li>
       <li>POS memungkinkan kita mengatur dan berkolaborasi dengan multi departemen</li>
-      <li>Dengan POS semua aktifitas dan progress semua terpantau oleh semua orang dengan real time dan kemampuan diakses dengan mudah dimana saja dan kapan saja</li>
+      <li>Dengan POS semua aktifitas dan progress semua terpantau oleh semua orang dengan real time dan dapat diakses dengan mudah dimana saja dan kapan saja</li>
 
     </ul>
       </div>
