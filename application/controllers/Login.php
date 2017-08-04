@@ -60,6 +60,13 @@ class Login extends CI_Controller {
 
 	}
 
+	public function cek_logins() {
+
+		var_dump($_POST);
+
+
+	}
+
 	public function cek_login()
 	{
 		//$this->form_validation->set_rules('noid', 'username', 'trim|required|min_length[5]');
