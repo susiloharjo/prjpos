@@ -1,3 +1,9 @@
 .icon-putih {
   color: #333;
 }
+
+.modal-dialog {
+       left: 40%;
+       right: auto;
+       width: 624px;
+   }
