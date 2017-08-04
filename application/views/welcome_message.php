@@ -51,8 +51,9 @@
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
             <li><a href="#">One more separated link</a></li>
-          </ul> -->
-        </li>
+          </ul>
+        </li>-->
+        <li><a href="#" data-toggle="modal" data-target="#howto">How To</a></li>
       </ul>
       <!-- <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -135,4 +136,31 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
+
+<!-- modal -->
+<div class="modal fade" id="howto" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title" id="">How To Use</h3>
+      </div>
+      <div class="modal-body">
+        <h3>Login menggunakan id dibawah</h3>
+        <ul>
+          <li>Login Id : sales pwd : user.100</li>
+          <li>Login Id : eng pwd : user.100</li>
+          <li>Login Id : rqm pwd : user.100</li>
+          <li>Login Id : proc pwd : user.100</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary"></button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </html>
