@@ -23,7 +23,7 @@ $username = ($this->session->userdata['logged_in']['username']);
   <section class="container">
     <div class="login">
       <h1>Login Form</h1>
-      <form method="post" action="<?php echo base_url() ?>Login/cek_login ">
+      <form method="post" action="<?php echo base_url() ?>Auth/cek_login ">
         <p><input type="text" name="username" value="" placeholder="Username"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
         <p><?=$image;?></p>

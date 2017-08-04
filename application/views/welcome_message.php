@@ -61,7 +61,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="btn btn-xs btn-default" href="Login">Login</a></li>
+        <li><a class="btn btn-xs btn-default" href="Auth">Login</a></li>
       </ul>
     </div>
   </div>

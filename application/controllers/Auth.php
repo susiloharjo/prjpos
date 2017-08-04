@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Auth extends CI_Controller {
 
 	//parent::__construct();
 
@@ -8,6 +8,7 @@ class Login extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
+			
 		    $this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 				$this->output->set_header("Pragma: no-cache");
 				$this->load->library('form_validation');
@@ -16,7 +17,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 				if ($this->session->userdata('level') == "Admin") {
-					redirect('dashboard/Dashboard');
+					redirect('sys/dashboard');
 			 		}
 				else if ($this->session->userdata('level') == "Penulis") {
 						redirect('penulis/Dashboard');
@@ -108,7 +109,7 @@ class Login extends CI_Controller {
                             );
 
                             $this->db->insert('log',$data);
-														redirect('dashboard/Dashboard');
+														redirect('sys/dashboard');
 
 
 			}
@@ -153,7 +154,7 @@ class Login extends CI_Controller {
 	public function logout() {
 
 		$this->session->sess_destroy();
-		redirect('Beranda');
+		redirect('Welcome');
 	}
 
 }
