@@ -20,7 +20,6 @@ class project extends REST_Controller {
             $this->db->where('id', $id);
             $project = $this->db->get('project')->result();
             $this->response($project, 200);
-
         }
     }
 
