@@ -74,7 +74,7 @@
     <ul>
       <li>Dengan POS kita bisa mengatur project kita dengan mudah dan efisien</li>
       <li>POS memungkinkan kita mengatur dan berkolaborasi dengan multi departemen</li>
-      <li>Dengan POS semua aktifitas dan progress semua terpantau oleh semua orang dengan real time dan dapat diakses dengan mudah dimana saja dan kapan saja</li>
+      <li>Dengan POS semua aktifitas dan progress dapat dipantau dengan real time dan dapat diakses dengan mudah dimana saja dan kapan saja</li>
 
     </ul>
       </div>
