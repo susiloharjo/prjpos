@@ -16,26 +16,64 @@ class dashboard extends CI_Controller{
 
   function index()
   {
-    if ($this->session->userdata('dept') == "SAFETY" ) {
-      redirect('sys/dashboard/admins');
-    }
-    else if ($this->session->userdata('dept') == "Marketing" ) {
-      redirect('sys/dashboard/admins');
-    }
-
-    $data['title'] = 'DASHBOARD ADMIN';
-    // echo $this->session->userdata('dept');
-    $this->load->view('sys/header', $data);
-    $this->load->view('sys/dashboard');
+    // cek level function
+    $this->cek_level();
   }
 
-  function admins()
+  function cek_level()  {
+
+    // ini hanya untuk development apabila sudah ok dinonaktifkan saja
+    $newdata = array(
+        'dept'  => 'Sales',
+        'level'     => 'Admin',
+        'logged_in' => TRUE
+      );
+
+    $this->session->set_userdata($newdata);
+
+    if ($this->session->userdata('dept') == "SAFETY" ) {
+      redirect('sys/dashboard/safety');
+    }
+    else if ($this->session->userdata('dept') == "Sales" ) {
+      redirect('sys/dashboard/sales');
+    }
+
+    else {
+      redirect('Auth');
+
+    }
+  }
+
+
+
+  function safety()
   {
+    if ($this->session->userdata('dept')<>"SAFETY" ) {
+      $this->cek_level();
+    }
+
     $data['title'] = 'DASHBOARD ADMIN OK';
 
     $this->load->view('sys/header', $data);
     $this->load->view('sys/dashboard');
+    $this->load->view('sys/footer');
 
   }
+
+  function sales()
+  {
+    if ($this->session->userdata('dept')<>"Sales" ) {
+      $this->cek_level();
+    }
+
+    $data['title'] = 'SALES';
+    $this->load->view('sys/header', $data);
+    $this->load->view('sys/sales');
+    $this->load->view('sys/footer');
+
+
+  }
+
+
 
 }
