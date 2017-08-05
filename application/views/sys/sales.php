@@ -91,8 +91,8 @@
         <td>Doe</td>
         <td>john@example.com</td>
         <td>
-          <div class="progress">
-          <div class="progress-bar progress-bar-success" style="width: 80%"></div>
+          <div class="progress progress-striped active">
+          <div class="progress-bar progress-bar-success " style="width: 80%"></div>
           </div>
         </td>
       </tr>
@@ -102,8 +102,8 @@
         <td>Moe</td>
         <td>mary@example.com</td>
         <td>
-          <div class="progress">
-          <div class="progress-bar progress-bar-danger" style="width: 10%"></div>
+          <div class="progress progress-striped active">
+          <div class="progress-bar progress-bar-danger " style="width: 10%"></div>
           </div>
         </td>
       </tr>
@@ -113,8 +113,8 @@
         <td>Dooley</td>
         <td>july@example.com</td>
         <td>
-          <div class="progress">
-          <div class="progress-bar progress-bar-warning" style="width: 40%"></div>
+          <div class="progress progress-striped active">
+          <div class="progress-bar progress-bar-warning " style="width: 40%"></div>
           </div>
         </td>
       </tr>
@@ -133,23 +133,25 @@
         <h4 class="modal-title" id="right">Add New Project</h4>
       </div>
       <div class="modal-body">
-        <form class="" action="index.html" method="post">
+        <form class="" action="<?php echo base_url() ?>api/project/data" method="post">
+
+              <input type="hidden" name="loc" value="sys/dashboard/sales">
                <div class="form-group">
                   <!-- <label for="email">Email:</label> -->
-                  <input type="text" class="form-control active" name="nama" placeholder="Nama Project">
+                  <input type="text" class="form-control active" name="nama" placeholder="Nama Project" required>
                </div>
                <div class="form-group">
                   <!-- <label for="pwd">Password:</label> -->
-                  <input type="text" class="form-control" name="perusahaan" placeholder="Perusahaan">
+                  <input type="text" class="form-control" name="perusahaan" placeholder="Perusahaan" required>
                </div>
                <div class="form-group">
                   <!-- <label for="pwd">Password:</label> -->
-                  <input type="text" class="form-control" name="lokasi" placeholder="Lokasi">
+                  <input type="text" class="form-control" name="lokasi" placeholder="Lokasi" required>
                </div>
 
                <div class="form-group">
                   <!-- <label for="pwd">Password:</label> -->
-                  <textarea name="name" class="form-control" placeholder="Keterangan" rows="8" cols="80"></textarea>
+                  <textarea name="name" class="form-control" placeholder="Keterangan" rows="8" cols="80" required></textarea>
                   <!-- <input type="text" class="form-control" name="tanggal" placeholder="Perusahaan"> -->
                </div>
 
@@ -180,31 +182,71 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script>
-        $(function() {
-            $('#notif').modal({
-                keyboard: true
-            });
-            // remove modal backdrop
-            $('.modal-backdrop').removeClass("modal-backdrop");
-        });
-        function hide() {
-                $('#notif').modal('hide');
-            }
-            // hide backdrop after 2 sec
-        setTimeout('hide()', 3000);
-    </script>
+
 
 
 <!-- modal -->
 <div class="modal fade" id="notif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog dialogs" style="width:250px;height:3%;">
-        <div class="modal-content" style="background-color:#333; color:#333;">
+    <div class="modal-dialog dialogs" style="width:200px;height:10px;">
+        <div class="modal-content" style="background-color:#28B62C; color:#333;">
             <div class="modal-body">
                 <div id="left">
                     <div>
                         <center>
-                            <p><font color="white">Welcome Back <?php echo $this->session->userdata('nama'); ?></font>
+                          <p><font color="white">
+                            <?php
+                            if ($this->session->tempdata('login') == '') {
+                              echo "";
+                            }
+                            else {
+                              echo "Welcome ";
+                              echo  $this->session->userdata('nama');
+                            ?>
+                            <script>
+                                $(function() {
+                                    $('#notif').modal({
+                                        keyboard: true
+                                    });
+                                    // remove modal backdrop
+                                    $('.modal-backdrop').removeClass("modal-backdrop");
+                                });
+                                function hide() {
+                                        $('#notif').modal('hide');
+                                    }
+                                    // hide backdrop after 2 sec
+                                setTimeout('hide()', 3000);
+                            </script>
+                            <?php
+                            }
+                          ?>
+                        </font>
+                            <p>
+                              <font color="white">
+                                <?php
+                                if ($this->session->tempdata('sukses') == '') {
+                                  echo "";
+                                }
+                                else {
+                                  echo $this->session->tempdata('sukses');
+                                ?>
+                                <script>
+                                    $(function() {
+                                        $('#notif').modal({
+                                            keyboard: true
+                                        });
+                                        // remove modal backdrop
+                                        $('.modal-backdrop').removeClass("modal-backdrop");
+                                    });
+                                    function hide() {
+                                            $('#notif').modal('hide');
+                                        }
+                                        // hide backdrop after 2 sec
+                                    setTimeout('hide()', 3000);
+                                </script>
+                                <?php
+                                }
+                              ?>
+                            </font>
                             </p>
                         </center>
                     </div>

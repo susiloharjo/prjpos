@@ -17,6 +17,8 @@ class dashboard extends CI_Controller{
   function index()
   {
     // cek level function
+    $this->session->set_tempdata('login', 'Welcome', 2);
+
     $this->cek_level();
   }
 

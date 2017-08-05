@@ -6,6 +6,10 @@ class project extends REST_Controller {
 
     function __construct($config = 'rest') {
         parent::__construct($config);
+        if ($this->session->userdata('level')== "" ) {
+          redirect('Auth');
+        }
+
     }
 
     // show data mahasiswa
@@ -25,6 +29,7 @@ class project extends REST_Controller {
 
     // insert new data to mahasiswa
     function data_post() {
+        $loc = $this->input->post('loc');
         $data = array(
                     'nama'           => $this->post('nama'),
                     'noprj'          => $this->post('noprj'),
@@ -33,10 +38,20 @@ class project extends REST_Controller {
                     'createDate'     => date('Y-m-d'),
                     'UpdateDate'     => $this->post('UpdateDate'),
                   );
+
+
+
         $insert = $this->db->insert('project', $data);
         if ($insert) {
+          $this->session->set_tempdata('sukses', 'input sukses', 2);
+
+            redirect($loc);
             $this->response($data, 200);
+
+
         } else {
+            $this->session->set_tempdata('sukses', 'input gagal', 2);
+            redirect($loc);
             $this->response(array('status' => 'fail', 502));
         }
     }
@@ -57,6 +72,7 @@ class project extends REST_Controller {
         $update = $this->db->update('project', $data);
         if ($update) {
             $this->response($data, 200);
+
         } else {
             $this->response(array('status' => 'fail', 502));
         }
