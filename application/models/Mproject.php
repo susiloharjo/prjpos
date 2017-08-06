@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class mproject extends CI_Model {
 
 	var $table = 'project';
-	var $column_order = array('nama','noprj','lokasi','perusahaan','progress','keterangan',null); //set column field database for datatable orderable
-	var $column_search = array('nama','noprj','lokasi','perusahaan','progress','keterangan'); //set column field database for datatable searchable just firstname , lastname , address are searchable
+	var $column_order = array('noprj','nama','lokasi','perusahaan','keterangan','progress',null); //set column field database for datatable orderable
+	var $column_search = array('noprj','nama','lokasi','perusahaan','keterangan','progress'); //set column field database for datatable searchable just firstname , lastname , address are searchable
 	var $order = array('id' => 'desc'); // default order
 
 	public function __construct()

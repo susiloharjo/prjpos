@@ -37,6 +37,7 @@ class project extends REST_Controller {
                     'noprj'          => $this->post('noprj'),
                     'lokasi'         => $this->post('lokasi'),
                     'perusahaan'     => $this->post('perusahaan'),
+                    'keterangan'     => $this->post('keterangan'),
                     'createDate'     => date('Y-m-d'),
                     'UpdateDate'     => $this->post('UpdateDate'),
                   );
@@ -67,6 +68,7 @@ class project extends REST_Controller {
                     'noprj'         => $this->put('noprj'),
                     'lokasi'        => $this->put('lokasi'),
                     'perusahaan'    => $this->put('perusahaan'),
+                    'keterangan'     => $this->post('keterangan'),
                     'updateDate'    => date('Y-m-d'),
                     'createDate'    => $this->put('createDate'),
                   );
@@ -91,7 +93,7 @@ class project extends REST_Controller {
             $this->response(array('status' => 'fail', 502));
         }
     }
-    
+
 
 
 }

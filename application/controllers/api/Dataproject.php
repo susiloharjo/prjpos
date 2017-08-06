@@ -42,9 +42,10 @@ class dataproject extends CI_Controller {
     foreach ($list as $person) {
       $no++;
       $row = array();
-      $row[] = $no;
+      // $row[] = $no;
+			$row[] = $person->id;
+			$row[] = $person->noprj;
       $row[] = $person->nama;
-      $row[] = $person->noprj;
       $row[] = $person->lokasi;
       $row[] = $person->perusahaan;
       $row[] = $person->keterangan;

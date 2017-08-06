@@ -100,9 +100,9 @@
         <thead>
           <tr>
             <!-- <th>No</th> -->
-            <th>No</th>
-            <th>Nama</th>
+            <th>ID</th>
             <th>No PRJ</th>
+            <th>Nama</th>
             <th>Lokasi</th>
             <th>Perusahaan</th>
             <th>keterangan</th>
@@ -117,9 +117,9 @@
 
         <tfoot>
           <tr>
-            <th>No</th>
-            <th>Nama</th>
+            <th>ID</th>
             <th>No PRJ</th>
+            <th>Nama</th>
             <th>Lokasi</th>
             <th>Perusahaan</th>
             <th>keterangan</th>
@@ -169,7 +169,7 @@
 
                <div class="form-group">
                   <!-- <label for="pwd">Password:</label> -->
-                  <textarea name="name" class="form-control" placeholder="Keterangan" rows="8" cols="80" required></textarea>
+                  <textarea name="keterangan" class="form-control" placeholder="Keterangan" rows="8" cols="80" required></textarea>
                   <!-- <input type="text" class="form-control" name="tanggal" placeholder="Perusahaan"> -->
                </div>
 
@@ -217,7 +217,7 @@
               "type": "POST"
           },
 
-          "order": [[ 6, 'desc' ]],
+          "order": [[ 2, 'desc' ]],
 
 
           //Set column definition initialisation properties.
