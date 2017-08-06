@@ -4,6 +4,8 @@
   <!-- Panel -->
   <div class="panel panel-success">
     <div class="panel-heading">
+      <button class="btn btn-default pull-right" data-toggle="modal" data-target="#add"><span class="glyphicon  glyphicon glyphicon-resize-full"></span></button>
+
       <h3 class="panel-title">To Do List</h3>
     </div>
     <div class="panel-body">
@@ -22,6 +24,8 @@
   <!-- Panel -->
   <div class="panel panel-primary">
     <div class="panel-heading">
+      <button class="btn btn-default pull-right" data-toggle="modal" data-target="#add"><span class="glyphicon  glyphicon glyphicon-resize-full"></span></button>
+
       <h3 class="panel-title">Project Monitor</h3>
     </div>
     <div class="list-group">
@@ -44,10 +48,38 @@
   <!-- End Panel -->
 </div>
 <!-- End col -->
+</div>
 
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <!-- Panel -->
+  <div class="panel panel-warning">
+    <div class="panel-heading">
+      <button class="btn btn-default pull-right" data-toggle="modal" data-target="#add"><span class="glyphicon  glyphicon glyphicon-resize-full"></span></button>
+      <h3 class="panel-title">Project History</h3>
+    </div>
+    <div class="list-group">
 
-
-
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="badge badge-success">Sales</span>
+          <span class="badge badge-success">14 Agustus 2017</span>
+          Create Project
+        </li>
+        <li class="list-group-item">
+          <span class="badge badge-warning">RQM</span>
+          <span class="badge badge-warning">15 Agustus 2017 </span>
+          Add Project Number
+        </li>
+        <li class="list-group-item">
+          <span class="badge badge-info">ENG</span>
+          <span class="badge badge-info">16 Agustus 2017</span>
+        Creating HO
+        </li>
+    </ul>
+  </div>
+  <!-- End Panel -->
+</div>
+<!-- End col -->
 </div>
 <!-- container-fluid -->
 
@@ -185,7 +217,7 @@
               "type": "POST"
           },
 
-          "order": [[ 0, 'asc' ]],
+          "order": [[ 6, 'desc' ]],
 
 
           //Set column definition initialisation properties.
@@ -311,7 +343,7 @@
 <!-- modal -->
 <div class="modal fade" id="notif" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog dialogs" style="width:200px;height:10px;">
-        <div class="modal-content" style="background-color:#28B62C; color:#333;">
+        <div class="modal-content" style="background-color:#158CBA; color:#333;">
             <div class="modal-body">
                 <div id="left">
                     <div>
