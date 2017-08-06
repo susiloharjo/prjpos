@@ -9,6 +9,8 @@ class project extends REST_Controller {
         if ($this->session->userdata('level')== "" ) {
           redirect('Auth');
         }
+        $this->load->model('mproject','person');
+
 
     }
 
@@ -89,5 +91,7 @@ class project extends REST_Controller {
             $this->response(array('status' => 'fail', 502));
         }
     }
+    
+
 
 }

@@ -9,11 +9,11 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <!-- https://bootswatch.com/lumen/ -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/page.css"> -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/dashboard.css">
 

@@ -84,6 +84,8 @@
 <!-- End col -->
 
 
+
+
 </div>
 <!-- container-fluid -->
 
@@ -111,6 +113,9 @@
             // hide backdrop after 2 sec
         setTimeout('hide()', 3000);
     </script>
+
+    
+
   </body>
 
 <!-- modal -->
