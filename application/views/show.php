@@ -133,6 +133,9 @@
                "<br>" +
                "Keterangan : "
                + value.keterangan +
+               "<br>" +
+               "Tanggal dibuat : "
+               + value.createDate +
                "</div></div></div>");
 
               //  show data by id
