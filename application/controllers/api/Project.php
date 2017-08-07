@@ -20,6 +20,7 @@ class project extends REST_Controller {
 
         if ($id == '') {
             $project = $this->db->get('project')->result();
+            
             $this->response($project, 200);
 
         } else if ($id > 0){
