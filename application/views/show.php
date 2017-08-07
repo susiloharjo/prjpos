@@ -102,7 +102,8 @@
       success : function(data) {
         // console.log(data);
         $(data).each(function (index,value) {
-          console.log(value.nama);
+          // console.log(value.nama);
+          console.log(data);
         });
       }
 
@@ -132,6 +133,9 @@
                "<br>" +
                "Keterangan : "
                + value.keterangan +
+               "<br>" +
+               "Tanggal dibuat : "
+               + value.createDate +
                "</div></div></div>");
 
               //  show data by id
