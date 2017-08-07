@@ -102,7 +102,8 @@
       success : function(data) {
         // console.log(data);
         $(data).each(function (index,value) {
-          console.log(value.nama);
+          // console.log(value.nama);
+          console.log(data);
         });
       }
 
