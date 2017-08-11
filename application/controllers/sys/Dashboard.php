@@ -69,9 +69,9 @@ class dashboard extends CI_Controller{
     }
 
     $data['title'] = 'SALES';
-    $this->load->view('sys/header', $data);
-    $this->load->view('sys/sales');
-    $this->load->view('sys/footer');
+    $this->load->view('sys/sales/header', $data);
+    $this->load->view('sys/sales/sales');
+    $this->load->view('sys/sales/footer');
 
 
   }
