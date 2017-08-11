@@ -219,6 +219,12 @@
 
 <script src="<?php echo base_url() ?>assets/dist/js/bootstrap-notify.js"></script>
 
+<!-- DataTables -->
+<script src="<?php echo base_url() ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<script src="<?php echo base_url() ?>assets/js/table.js" charset="utf-8"></script>
+
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -234,8 +240,10 @@
           });
 
 
+
     });
 </script>
+
 
 
 </body>
