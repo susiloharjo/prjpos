@@ -4,7 +4,7 @@
      Page rendered in <strong>{elapsed_time}</strong> s
 
   </div>
-  <strong> Developed By <a href="http://lapancorps.com">Lapancorps</a> </strong> &copy; <?php echo date('Y') ?> 
+  <strong> Developed By <a href="http://lapancorps.com">Lapancorps</a> </strong> &copy; <?php echo date('Y') ?>
 </footer>
 
 <!-- Control Sidebar -->
@@ -216,5 +216,27 @@
 <script src="<?php echo base_url() ?>assets/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url() ?>assets/dist/js/demo.js"></script>
+
+<script src="<?php echo base_url() ?>assets/dist/js/bootstrap-notify.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+
+        $.notify({
+            // icon: 'ti-gift',
+            message: "Welcome to <b>POS</b> <br>Project One Sheet"
+
+          },{
+              type: 'success',
+              timer: 100
+          });
+
+
+    });
+</script>
+
+
 </body>
 </html>
