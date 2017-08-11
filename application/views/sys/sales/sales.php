@@ -9,7 +9,6 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Hi <?php echo $this->session->userdata('dept');?></a></li>
-
       </ol>
     </section>
 
