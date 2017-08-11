@@ -1,6 +1,81 @@
 body {
   background-color: #333;
 }
+
+body {
+  background-color: #333;
+}
+
+.tulisan1 {
+  padding-top: 10px;
+
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 20px;
+
+}
+
+.tulisan2 {
+  font-family: 'Droid Sans', sans-serif;
+  padding-top: 10px;
+  font-size: 20px;
+  /*color:#f0f0f0;*/
+
+}
+
+.warna-title {
+  color: #95C2C7 !important;
+}
+
+.navbar .navbar-inverse {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.header1 {
+  background-color: #95C2C7 !important;
+  padding-bottom: 30px;
+  height: 100%;
+
+}
+
+.header2 {
+  background-color: #f0f0f0 !important;
+  padding-bottom: 30px;
+  height: 100%;
+
+}
+
+.header3 {
+  background-color: #333 !important;
+  padding-bottom: 30px;
+  height: 100%;
+  color:#f0f0f0;
+
+}
+
+.header3 h1 {
+  color:#f0f0f0 !important;
+
+}
+
+.tulisan1 img {
+  width: 200px;
+  height:auto;
+}
+
+.iconbesar {
+  font-size: 200px;
+}
+.icon {
+  margin-top: 50px;
+}
+
+
 .sidebar-menu li.headeryellow {
 
     padding: 13px 25px 13px 15px;
@@ -15,13 +90,12 @@ body {
 }
 
 
-
 .sidebar-menu li.headergreen {
     /*margin-top: 1px;*/
     padding: 13px 25px 13px 15px;
     font-size: 14px;
     font-weight: bold;
-    
+
 }
 
 .sidebar-form, .sidebar-menu > li.headergreen {
