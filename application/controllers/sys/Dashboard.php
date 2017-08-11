@@ -46,8 +46,6 @@ class dashboard extends CI_Controller{
     }
   }
 
-
-
   function safety()
   {
     if ($this->session->userdata('dept')<>"SAFETY" ) {
@@ -62,7 +60,7 @@ class dashboard extends CI_Controller{
 
   }
 
-  function sales()
+public function sales()
   {
     if ($this->session->userdata('dept')<>"Sales" ) {
       $this->cek_level();
@@ -72,7 +70,6 @@ class dashboard extends CI_Controller{
     $this->load->view('sys/sales/header', $data);
     $this->load->view('sys/sales/sales');
     $this->load->view('sys/sales/footer');
-
 
   }
 
