@@ -244,7 +244,18 @@
     });
 </script>
 
+<script type = "application/javascript">
+var url = 'http://localhost/pos/sys/todo/ajax_list';
+$.ajax({
+    type: "GET",
+    url: url,
+    dataType: 'json',
 
+    success: function(response){
+        console.log([response]);
+    }
+ });
+      </script>
 
 </body>
 </html>

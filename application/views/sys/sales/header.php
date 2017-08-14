@@ -229,19 +229,19 @@
           </ul>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="<?php echo base_url()?>sys/todo">
             <i class="fa fa-files-o"></i>
-            <span>Tasks</span>
-            <span class="pull-right-container">
+            <span>To Do</span>
+            <!-- <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
-            </span>
+            </span> -->
           </a>
-          <ul class="treeview-menu">
+          <!-- <ul class="treeview-menu">
             <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
             <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
             <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
             <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
+          </ul> -->
         </li>
         <li>
           <a href="../widgets.html">
