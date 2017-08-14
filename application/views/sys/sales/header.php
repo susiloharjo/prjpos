@@ -329,7 +329,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-folder"></i> <span>Examples</span>
             <span class="pull-right-container">
@@ -344,7 +344,7 @@
             <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
             <li><a href="404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
             <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li class="active"><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
             <li><a href="pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
           </ul>
         </li>
