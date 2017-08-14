@@ -244,18 +244,43 @@
     });
 </script>
 
-<script type = "application/javascript">
-var url = 'http://localhost/pos/sys/todo/ajax_list';
-$.ajax({
-    type: "GET",
-    url: url,
-    dataType: 'json',
+<script type="text/javascript">
+$('#cektodo').click(function() {
+  alert("Checkbox state (method 1) = " + $('#cektodo').prop('checked'));
+  alert("Checkbox state (method 2) = " + $('#cektodo').is(':checked'));
+});
+</script>
 
-    success: function(response){
-        console.log([response]);
-    }
- });
-      </script>
+<!-- <script type = "application/javascript">
+var uri = 'http://localhost/pos/sys/todo/ajax_list';
+// $.ajax({
+//     type: "GET",
+//     url: url,
+//     dataType: 'json',
+//
+//     success: function(response){
+//         console.log([response]);
+//     }
+//  });
+
+function  data_teman(no){
+  //alert(no);
+    $.ajax({
+    url:uri,
+    type:"GET",
+    cache:false,
+    dataType:'json',
+    data:{n:no},
+    success: function(data){
+    $.each(data,function(key,val) {
+
+    $('#nama_'+val.id).text(val.nama);
+    $('#hobi_'+val.id).text(val.hoby);
+
+   }); // end each
+ }// end success
+}); // end ajax
+</script> -->
 
 </body>
 </html>

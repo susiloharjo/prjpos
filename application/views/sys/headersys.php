@@ -217,16 +217,10 @@
       <ul class="sidebar-menu">
         <li class="headergreen">MY WORKSPACE</li>
         <li class="treeview">
-          <a href="#">
+          <a href="<?php echo base_url() ?>sys/dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url() ?>assets/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="<?php echo base_url() ?>assets/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul>
+
         </li>
         <li class="treeview">
           <a href="<?php echo base_url()?>sys/todo">
