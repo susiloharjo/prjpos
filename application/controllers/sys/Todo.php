@@ -22,16 +22,7 @@ class todo extends CI_Controller{
     $this->load->view('sys/sales/footer');
   }
 
-  public function ajax_list()
-	{
-    header("Content-Type: application/json");
-    $this->db->select('*');
-    $this->db->from('todo');
-    $query = $this->db->get();
 
-    echo json_encode($query->result());
-
-  }
 
   public function add() {
     $data = array(
@@ -55,5 +46,23 @@ class todo extends CI_Controller{
 
 
   }
+
+  public function ajax_list()
+	{
+    header("Content-Type: application/json");
+    $this->db->select('*');
+    $this->db->from('todo');
+    $query = $this->db->get();
+
+    echo json_encode($query->result());
+
+  }
+
+  public function ajax_edit($id)
+	{
+    $this->db->where('id',$id);
+		$data = $this->db->get('todo');
+		echo json_encode($data);
+	}
 
 }
