@@ -73,6 +73,19 @@ public function sales()
 
   }
 
+  public function singles()
+    {
+      // if ($this->session->userdata('dept')<>"Sales" ) {
+      //   $this->cek_level();
+      // }
+
+      $data['title'] = 'Palapa Project';
+      $this->load->view('sys/headersys', $data);
+      $this->load->view('sys/sales/singles');
+      $this->load->view('sys/sales/footer');
+
+    }
+
 
 
 }

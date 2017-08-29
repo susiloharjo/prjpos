@@ -12,6 +12,7 @@ class todo extends CI_Controller{
   function index()
   {
     $data['title'] = 'SALES';
+    $data['header_active'] = 'active';
     $noid = $this->session->userdata('noid');
     $query=$this->db->query("SELECT * from todo where noid='$noid'");
     $datas = $query->result();
