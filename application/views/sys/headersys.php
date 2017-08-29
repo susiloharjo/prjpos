@@ -215,43 +215,37 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="headergreen">MY WORKSPACE</li>
+        <li class="header green">MY WORKSPACE</li>
         <li class="treeview">
-          <a href="#">
+          <a href="<?php echo base_url() ?>sys/dashboard">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url() ?>assets/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="<?php echo base_url() ?>assets/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul>
+
         </li>
-        <li class="treeview">
-          <a href="#">
+        <li class="treeview " >
+          <a href="<?php echo base_url()?>sys/todo">
             <i class="fa fa-files-o"></i>
-            <span>Tasks</span>
-            <span class="pull-right-container">
+            <span>To Do</span>
+            <!-- <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
-            </span>
+            </span> -->
           </a>
-          <ul class="treeview-menu">
+          <!-- <ul class="treeview-menu">
             <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
             <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
             <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
             <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
+          </ul> -->
         </li>
         <li>
-          <a href="../widgets.html">
+          <a href="#">
             <i class="fa fa-th"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">Hot</small>
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-pie-chart"></i>
             <span>Notes</span>
@@ -281,9 +275,9 @@
             <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
             <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
             <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li class="headeryellow">PROJECT</li>
+        <li class="header yellow">PROJECT</li>
 
         <li class="treeview">
           <a href="#">
@@ -293,12 +287,20 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="../forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="../forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> Out Side Plant</a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> Optical Network</a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> IP Radio</a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> ME Works</a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> Civil Const for Telecom Facility</a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> IT Infrastructure </a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> System Electronic </a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> Industrial Automation </a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> Solar Cell and Renew. Energy </a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> Project Management Services </a></li>
+            <li><a href="<?php echo base_url() ?>sys/dashboard/sales"><i class="fa fa-circle-o"></i> Highway Toll Gate System </a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i> <span>Tasks</span>
             <span class="pull-right-container">
@@ -329,7 +331,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-folder"></i> <span>Examples</span>
             <span class="pull-right-container">
@@ -344,7 +346,7 @@
             <li><a href="lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
             <li><a href="404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
             <li><a href="500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li class="active"><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
             <li><a href="pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
           </ul>
         </li>
@@ -385,7 +387,7 @@
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
       </ul>
     </section>
     <!-- /.sidebar -->

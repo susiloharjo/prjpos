@@ -76,21 +76,21 @@ body {
 }
 
 
-.sidebar-menu li.headeryellow {
+.sidebar-menu li.yellow {
 
     padding: 13px 25px 13px 15px;
     font-size: 14px;
     font-weight: bold;
 }
 
-.sidebar-form, .sidebar-menu > li.headeryellow {
+.sidebar-form, .sidebar-menu > li.yellow {
 
     background-color: #F39C12 !important;
     color: #f0f0f0 !important;
 }
 
 
-.sidebar-menu li.headergreen {
+.sidebar-menu li.green {
     /*margin-top: 1px;*/
     padding: 13px 25px 13px 15px;
     font-size: 14px;
@@ -98,8 +98,14 @@ body {
 
 }
 
-.sidebar-form, .sidebar-menu > li.headergreen {
+.sidebar-form, .sidebar-menu > li.green {
 
     background-color: #00A65A !important;
     color: #f0f0f0 !important;
+}
+
+.folder-list > li img {
+    border-radius: 0% !important;
+    max-width: 100%;
+    height: auto;
 }

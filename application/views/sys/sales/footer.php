@@ -244,7 +244,154 @@
     });
 </script>
 
+<script type="text/javascript">
+$('#cektodo').click(function() {
+  alert("Checkbox state (method 1) = " + $('#cektodo').prop('checked'));
+  alert("Checkbox state (method 2) = " + $('#cektodo').is(':checked'));
+});
+</script>
+
+<!-- <script type = "application/javascript">
+var uri = 'http://localhost/pos/sys/todo/ajax_list';
+// $.ajax({
+//     type: "GET",
+//     url: url,
+//     dataType: 'json',
+//
+//     success: function(response){
+//         console.log([response]);
+//     }
+//  });
+
+function  data_teman(no){
+  //alert(no);
+    $.ajax({
+    url:uri,
+    type:"GET",
+    cache:false,
+    dataType:'json',
+    data:{n:no},
+    success: function(data){
+    $.each(data,function(key,val) {
+
+    $('#nama_'+val.id).text(val.nama);
+    $('#hobi_'+val.id).text(val.hoby);
+
+   }); // end each
+ }// end success
+}); // end ajax
+</script> -->
 
 
+<script type="text/javascript">
+function add_data()
+
+// alert("click");
+{
+  save_method = 'add';
+  // $('#form')[0].reset(); // reset form on modals
+  $('#modal_data').modal('show'); // show bootstrap modal
+  $('.modal-title').text('Add To Do'); // Set Title to Bootstrap modal title
+}
+
+function edit_person(id)
+{
+  save_method = 'update';
+  $('#form')[0].reset(); // reset form on modals
+
+  //Ajax Load data from ajax
+  $.ajax({
+    url : "<?php echo site_url('warehouse/crequest/ajax_edit/')?>/" + id,
+    type: "GET",
+    dataType: "JSON",
+    success: function(data)
+    {
+
+      $('[name="id"]').val(data.id);
+      $('[name="noid"]').val(data.noid);
+      $('[name="po"]').val(data.po);
+      $('[name="tanggal"]').val(data.tanggal);
+      $('[name="customerid"]').val(data.customerid);
+      $('[name="productid"]').val(data.productid);
+      $('[name="printid"]').val(data.printid);
+      $('[name="quantity"]').val(data.quantity);
+      $('[name="qoperator"]').val(data.qoperator);
+      $('[name="status"]').val(data.status);
+      $('[name="keterangan"]').val(data.keterangan);
+      $('[name="reqNumber"]').val(data.reqNumber);
+
+
+        $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
+        $('.modal-title').text('Edit Person'); // Set title to Bootstrap modal title
+
+    },
+    error: function (jqXHR, textStatus, errorThrown)
+    {
+        alert('Error get data from ajax');
+    }
+});
+}
+
+function reload_table()
+{
+  table.ajax.reload(null,false); //reload datatable ajax
+}
+
+function save()
+{
+  var url;
+  if(save_method == 'add')
+  {
+      url = "<?php echo site_url('warehouse/crequest/ajax_add')?>";
+  }
+  else
+  {
+    url = "<?php echo site_url('warehouse/crequest/ajax_update')?>";
+  }
+
+   // ajax adding data to database
+      $.ajax({
+        url : url,
+        type: "POST",
+        data: $('#form').serialize(),
+        dataType: "JSON",
+        success: function(data)
+        {
+           //if success close modal and reload ajax table
+           $('#modal_form').modal('hide');
+           reload_table();
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('Error adding / update data/ Data exist');
+        }
+    });
+}
+
+function delete_data(id)
+{
+  alert("klik");
+  if(confirm('Are you sure delete this data?'))
+  {
+    // ajax delete data to database
+      $.ajax({
+        url : "<?php echo site_url('todo/delete')?>",
+        type: "POST",
+        data: "id="+ id
+        // data: va
+        // dataType: "JSON",
+        success: function()
+        {
+          console.log("success");
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('Error adding / update data');
+        }
+    });
+
+  }
+}
+</script>
 </body>
 </html>

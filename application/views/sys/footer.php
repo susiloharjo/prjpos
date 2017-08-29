@@ -1,5 +1,4 @@
 
-</div>
 <footer>
   <div class="container-fluid">
     <div class="pull-right">

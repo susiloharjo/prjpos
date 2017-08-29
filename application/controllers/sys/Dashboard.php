@@ -54,7 +54,7 @@ class dashboard extends CI_Controller{
 
     $data['title'] = 'DASHBOARD ADMIN OK';
 
-    $this->load->view('sys/header', $data);
+    $this->load->view('sys/headersys', $data);
     $this->load->view('sys/dashboard');
     $this->load->view('sys/footer');
 
@@ -67,11 +67,24 @@ public function sales()
     }
 
     $data['title'] = 'SALES';
-    $this->load->view('sys/sales/header', $data);
+    $this->load->view('sys/headersys', $data);
     $this->load->view('sys/sales/sales');
     $this->load->view('sys/sales/footer');
 
   }
+
+  public function singles()
+    {
+      // if ($this->session->userdata('dept')<>"Sales" ) {
+      //   $this->cek_level();
+      // }
+
+      $data['title'] = 'Palapa Project';
+      $this->load->view('sys/headersys', $data);
+      $this->load->view('sys/sales/singles');
+      $this->load->view('sys/sales/footer');
+
+    }
 
 
 
