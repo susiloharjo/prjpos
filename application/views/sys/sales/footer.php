@@ -277,67 +277,89 @@ function edit_todo(id)
 }
 
 
-            function save()
+    function save()
+    {
+      var url;
+      if(save_method == 'add')
+      {
+          url = "<?php echo site_url('sys/todo/ajax_add')?>";
+      }
+      else
+      {
+        url = "<?php echo site_url('sys/todo/ajax_update')?>";
+      }
+
+
+       //ajax adding data to database
+          $.ajax({
+            url : url,
+            type: "POST",
+            data: $('#form').serialize(),
+            dataType: "JSON",
+            success: function(data)
             {
-              var url;
-              if(save_method == 'add')
-              {
-                  url = "<?php echo site_url('sys/todo/ajax_add')?>";
-              }
-              else
-              {
-                url = "<?php echo site_url('sys/todo/ajax_update')?>";
-              }
+               //if success close modal and reload ajax table
+               $('#modal').modal('hide');
+               reload_table();
+            },
+            // error: function (jqXHR, textStatus, errorThrown)
+            // error: function (textStatus)
+            // {
+            //     alert('Error adding / update data/ Data exist');
+            // }
+        });
+    }
 
-
-               //ajax adding data to database
-                  $.ajax({
-                    url : url,
-                    type: "POST",
-                    data: $('#form').serialize(),
-                    dataType: "JSON",
-                    success: function(data)
-                    {
-                       //if success close modal and reload ajax table
-                       $('#modal').modal('hide');
-                       reload_table();
-                    },
-                    // error: function (jqXHR, textStatus, errorThrown)
-                    // error: function (textStatus)
-                    // {
-                    //     alert('Error adding / update data/ Data exist');
-                    // }
-                });
-            }
-
-            function delete_todo(id)
+    function delete_todo(id)
+    {
+      if(confirm('Are you sure delete this data?'))
+      {
+        // ajax delete data to database
+          $.ajax({
+            url : "<?php echo site_url('sys/todo/ajax_delete')?>/"+id,
+            type: "POST",
+            dataType: "JSON",
+            success: function(data)
             {
-              if(confirm('Are you sure delete this data?'))
-              {
-                // ajax delete data to database
-                  $.ajax({
-                    url : "<?php echo site_url('sys/todo/ajax_delete')?>/"+id,
-                    type: "POST",
-                    dataType: "JSON",
-                    success: function(data)
-                    {
-                       //if success reload ajax table
-                       $('#modal').modal('hide');
-                       reload_table();
-                    },
-                    error: function (jqXHR, textStatus, errorThrown)
-                    {
-                        alert('Error adding / update data');
-                    }
-                });
-
-              }
-            }
-
-            function reload_table()
+               //if success reload ajax table
+               $('#modal').modal('hide');
+               reload_table();
+            },
+            error: function (jqXHR, textStatus, errorThrown)
             {
-              window.location.reload();
+                alert('Error adding / update data');
             }
+        });
+
+      }
+    }
+
+    function reload_table()
+    {
+      window.location.reload();
+    }
+
+    function checkbox(id) {
+      // alert(id);
+      $.ajax({
+        url : "<?php echo site_url('sys/todo/checked')?>/"+id,
+        type: "POST",
+        dataType: "JSON",
+        success: function(data)
+        {
+           //if success reload ajax table
+           $('#modal').modal('hide');
+           reload_table();
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('Error adding / update data');
+        }
+    });
+
+
+
+    }
 
 
 
@@ -363,12 +385,12 @@ function edit_todo(id)
     });
 </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $('#cektodo').click(function() {
   alert("Checkbox state (method 1) = " + $('#cektodo').prop('checked'));
   alert("Checkbox state (method 2) = " + $('#cektodo').is(':checked'));
 });
-</script>
+</script> -->
 
 
 
