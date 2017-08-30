@@ -25,20 +25,6 @@ class todo extends CI_Controller{
 
 
 
-  // public function add() {
-  //   $data = array(
-  //                 'noid' => $this->session->userdata('noid'),
-  //                 'todo' => $this->input->post('todo'),
-  //                 'status' => 'progress',
-  //                 'createDate' => date('Y-m-d H:i:s'),
-  //                 'updateDate' => date('Y-m-d H:i:s'),
-  //               );
-  //   // echo var_dump($data);
-  //   $this->db->insert('todo',$data);
-  //   // redirect('sys/todo');
-  //   echo json_encode(array("status" => TRUE));
-  // }
-
   public function ajax_add()
 	{
     $data = array(
@@ -58,11 +44,53 @@ class todo extends CI_Controller{
                   'noid' => $this->session->userdata('noid'),
                   'todo' => $this->input->post('todo'),
                   'status' => 'progress',
-                  'createDate' => date('Y-m-d H:i:s'),
+                  // 'createDate' => date('Y-m-d H:i:s'),
                   'updateDate' => date('Y-m-d H:i:s'),
                 );
 
       $this->db->where('id',$this->input->post('id'));
+      $this->db->update('todo',$data);
+
+		echo json_encode(array("status" => TRUE));
+	}
+
+  public function checked($id)
+	{
+    $this->db->select('checked');
+    $this->db->where('id',$id);
+    $query = $this->db->get('todo');
+
+    if($query->num_rows()>0)
+    {
+      foreach ($query->result() as $row)
+      {
+        $checked	= $row->checked;
+        //$namakertas	= $row->nama_product;
+      }
+    }
+
+
+    if ($checked == 'checked') {
+      $check = '0';
+      $progress = 'progress';
+      $label = 'label-danger';
+    }
+    else {
+      $check = 'checked';
+      $progress = 'done';
+      $label = 'label-success';
+
+    }
+
+    $data = array(
+                  // 'checked' => 'checked',
+                  'checked' => $check,
+                  'status' => $progress,
+                  'label' => $label,
+
+                );
+
+      $this->db->where('id',$id);
       $this->db->update('todo',$data);
 
 		echo json_encode(array("status" => TRUE));
@@ -77,21 +105,6 @@ class todo extends CI_Controller{
 
   }
 
-  // public function update($id) {
-  //   $data = array(
-  //                 'noid' => $this->session->userdata('noid'),
-  //                 'todo' => $this->input->post('todo'),
-  //                 'status' => 'progress',
-  //                 'createDate' => date('Y-m-d H:i:s'),
-  //                 'updateDate' => date('Y-m-d H:i:s'),
-  //               );
-  //
-  //   $this->db->where('id',$id);
-  //   $this->db->update('todo',$data);
-  //   redirect('sys/todo');
-  //
-  //
-  // }
 
   public function ajax_list()
 	{

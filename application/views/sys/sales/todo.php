@@ -63,11 +63,11 @@
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                   <!-- checkbox -->
-                  <input id="cektodo" name="cektodo" type="checkbox" value="">
+                  <input id="cektodo" <?php echo $data[$i]->checked;?> onclick="checkbox('<?php echo $data[$i]->id;?>')" name="cektodo" type="checkbox" value="">
                   <!-- todo text -->
                   <span class="text"><?php echo $data[$i]->todo;?></span>
                   <!-- Emphasis label -->
-                  <small class="label label-danger"><i class="fa fa-clock-o"></i> <?php echo $data[$i]->status;?></small>
+                  <small class="label <?php echo $data[$i]->label;?>"><i class="fa fa-clock-o"></i> <?php echo $data[$i]->status;?></small>
                   <!-- General tools such as edit or delete-->
                   <div class="tools">
                     <!-- <a href="todo/edit/<?php echo $data[$i]->id;?>"><i class="fa fa-edit"></i></a> -->
