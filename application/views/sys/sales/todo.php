@@ -43,8 +43,8 @@
                   <li><a href="#">3</a></li>
                   <li><a href="#">&raquo;</a></li>
                 </ul> -->
-                <button type="button" data-toggle="modal" data-target="#modal" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
-
+                <!-- <button type="button" data-toggle="modal" data-target="#modal" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button> -->
+                <a href="#" class="btn btn-default pull-right" onclick="add_todo()"><i class="fa fa-plus"> Add todo</i></a>
               </div>
             </div>
             <!-- /.box-header -->
@@ -70,8 +70,10 @@
                   <small class="label label-danger"><i class="fa fa-clock-o"></i> <?php echo $data[$i]->status;?></small>
                   <!-- General tools such as edit or delete-->
                   <div class="tools">
-                    <a href="todo/edit/<?php echo $data[$i]->id;?>"><i class="fa fa-edit"></i></a>
-                    <a href="todo/delete/<?php echo $data[$i]->id;?>"><i class="fa fa-trash-o"></i></a>
+                    <!-- <a href="todo/edit/<?php echo $data[$i]->id;?>"><i class="fa fa-edit"></i></a> -->
+                    <a href="#" onclick="edit_todo('<?php echo $data[$i]->id;?>')"><i class="fa fa-edit"></i></a>
+                    <a href="#" onclick="delete_todo('<?php echo $data[$i]->id;?>')"><i class="fa fa-trash-o"></i></a>
+                    <!-- <a href="todo/delete/<?php echo $data[$i]->id;?>"><i class="fa fa-trash-o"></i></a> -->
 
                   </div>
 
@@ -101,7 +103,10 @@
         <h4 class="modal-title" id="">Add To Do List</h4>
       </div>
       <div class="modal-body">
-        <form class="form-group" action="todo/add/" method="post">
+        <!-- <form class="form-group" id="form" action="todo/add/" method="post"> -->
+        <form class="form-group" id="form"  method="post">
+
+          <input type="hidden" name="id" value="">
           <div class="form-group">
             <label for="todo">To DO</label>
             <input type="text" class="form-control" name="todo" placeholder="Enter To Do">
@@ -110,7 +115,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button  onclick="save()" class="btn btn-primary">Add</button>
+
       </div>
         </form>
     </div>
