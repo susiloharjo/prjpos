@@ -25,7 +25,22 @@ class todo extends CI_Controller{
 
 
 
-  public function add() {
+  // public function add() {
+  //   $data = array(
+  //                 'noid' => $this->session->userdata('noid'),
+  //                 'todo' => $this->input->post('todo'),
+  //                 'status' => 'progress',
+  //                 'createDate' => date('Y-m-d H:i:s'),
+  //                 'updateDate' => date('Y-m-d H:i:s'),
+  //               );
+  //   // echo var_dump($data);
+  //   $this->db->insert('todo',$data);
+  //   // redirect('sys/todo');
+  //   echo json_encode(array("status" => TRUE));
+  // }
+
+  public function ajax_add()
+	{
     $data = array(
                   'noid' => $this->session->userdata('noid'),
                   'todo' => $this->input->post('todo'),
@@ -33,12 +48,26 @@ class todo extends CI_Controller{
                   'createDate' => date('Y-m-d H:i:s'),
                   'updateDate' => date('Y-m-d H:i:s'),
                 );
-    echo var_dump($data);
-    $this->db->insert('todo',$data);
-    redirect('sys/todo');
+		$insert =  $this->db->insert('todo',$data);
+		echo json_encode(array("status" => TRUE));
+	}
 
+  public function ajax_update()
+	{
+    $data = array(
+                  'noid' => $this->session->userdata('noid'),
+                  'todo' => $this->input->post('todo'),
+                  'status' => 'progress',
+                  'createDate' => date('Y-m-d H:i:s'),
+                  'updateDate' => date('Y-m-d H:i:s'),
+                );
 
-  }
+      $this->db->where('id',$this->input->post('id'));
+      $this->db->update('todo',$data);
+
+		echo json_encode(array("status" => TRUE));
+	}
+
 
   public function delete($id) {
     $this->db->where('id',$id);
@@ -47,6 +76,22 @@ class todo extends CI_Controller{
 
 
   }
+
+  // public function update($id) {
+  //   $data = array(
+  //                 'noid' => $this->session->userdata('noid'),
+  //                 'todo' => $this->input->post('todo'),
+  //                 'status' => 'progress',
+  //                 'createDate' => date('Y-m-d H:i:s'),
+  //                 'updateDate' => date('Y-m-d H:i:s'),
+  //               );
+  //
+  //   $this->db->where('id',$id);
+  //   $this->db->update('todo',$data);
+  //   redirect('sys/todo');
+  //
+  //
+  // }
 
   public function ajax_list()
 	{
@@ -63,7 +108,17 @@ class todo extends CI_Controller{
 	{
     $this->db->where('id',$id);
 		$data = $this->db->get('todo');
-		echo json_encode($data);
+    // $query = $this->db->get();
+
+    echo json_encode($data->result());
+
+	}
+
+  public function ajax_delete($id)
+	{
+    $this->db->where('id',$id);
+    $this->db->delete('todo');
+		echo json_encode(array("status" => TRUE));
 	}
 
 }
